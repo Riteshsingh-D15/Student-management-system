@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Manager</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+    }
+
+    .form-card, .list-card {
+      background: white;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .form-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .form-group input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .form-group button {
+      padding: 10px 15px;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .form-group button:hover {
+      background: #5a67d8;
+    }
+
+    .student-list {
+      margin-top: 15px;
+    }
+
+    .student-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f7f7f7;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+    }
+
+    .student-card h3 {
+      margin: 0;
+    }
+
+    .actions button {
+      margin-left: 5px;
+      padding: 6px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .update {
+      background: #38a169;
+      color: white;
+    }
+
+    .delete {
+      background: #e53e3e;
+      color: white;
+    }
+
+    .update:hover {
+      background: #2f855a;
+    }
+
+    .delete:hover {
+      background: #c53030;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="container">
+    <h1>🎓 Student Manager</h1>
+
+    <!-- Form -->
+    <div class="form-card">
+      <h2>Add Student</h2>
+      <div class="form-group">
+        <input id="name" placeholder="Enter Name" />
+        <input id="age" type="number" placeholder="Enter Age" />
+        <input id="course" placeholder="Enter Course" />
+        <button onclick="addStudent()">Add Student</button>
+      </div>
+    </div>
+
+    <!-- List -->
+    <div class="list-card">
+      <h2>Students List</h2>
+      <div id="list" class="student-list"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
