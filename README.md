@@ -117,7 +117,3 @@ Open `index.html` in your browser
 Developed by **Ritesh Singh**
 
 ---
-
-## 📄 License
-
-This project is open-source and free to use.
